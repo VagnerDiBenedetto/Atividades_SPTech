@@ -1,0 +1,54 @@
+body{
+    background-image: url("https://www.correiodopovo.com.br/image/policy:3.195068:1547659618/433124.JPG?a=3%3A2&$p$a=d3826a5");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: green;
+}
+
+
+.inputs{
+    display: inline-block;
+    width: auto;
+    margin: 10px;
+}
+.divInputs{
+    border: 3px rgb(20, 54, 20) solid;
+    background-color: greenyellow;
+    border-radius: 10px;
+    width: 490px;
+    
+
+}
+
+input{
+    width: 90px;
+
+}
+
+table{
+    background-color: greenyellow;
+    border: 3px rgb(20, 54, 20) solid;
+    border-radius: 5px;
+    width: 490px;
+    text-align: center;
+}
+    td,th {
+        border: 1px solid rgb(20, 54, 20);
+}
+
+h1{
+    border: 5px rgb(20, 54, 20) solid;
+    background-color: greenyellow;
+    border-radius: 10px;
+    text-align: center;
+    width: 300px;
+    color: rgb(20, 54, 20);
+
+}
+
+button{
+    background-color: greenyellow;
+    border: 3px rgb(20, 54, 20) solid;
+    border-radius: 5px;
+    
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <br>
+    <title>Marise's Machine Personalizada</title>
+    <link rel="stylesheet" href="MMPersonalizada.css">
+</head>
+
+<body>
+        <center>
+        <h1>Marise's Machine Personalizada</h1>
+       
+
+<br><br>
+
+
+        <div class="divInputs">
+                <div class="inputs" id="divDecimal"> 
+                        <b>Decimal</b><br>
+                        <input type="text" id="inputDecimal">
+                </div>
+                <div class="inputs" id="divOctal"> 
+                        <b>Octal</b><br>
+                        <input type="text" id="inputOctal">
+                </div>
+                <div class="inputs" id="divHexadecimal"> 
+                        <b>Hexadecimal</b><br>
+                        <input type="text" id="inputHexadecimal">
+                </div>
+                <div class="inputs" id="divBinario"> 
+                        <b>Binário</b><br>
+                        <input type="text" id="inputBinario">
+                </div>
+        </div>
+
+        <br><br>
+        
+        <button onclick="converter()">Converter</button>
+        
+        <br><br>
+        
+        <table id="tableResultados">
+
+                <tbody>
+                        <tr>
+                          <th>Decimal</th>
+                          <th>Octal</th>
+                          <th>Hexadecimal</th>
+                          <th>Binario</th>
+                        </tr>
+                </tbody>
+        
+        </table>
+
+        <br><br>
+
+        </center>
+
+
+
+</body></html>
+
+
+<script>
+
+function converter() {
+    
+    var dec = Number (inputDecimal.value);
+    var oc = Number (inputOctal.value);
+    var hexa = inputHexadecimal.value;
+    var bin = Number(inputBinario.value);
+
+//     inputDecimal.value = "";
+    inputOctal.value = "";
+    inputHexadecimal.value = "";
+    inputBinario.value = "";
+
+
+        if (dec != ""){
+
+                var decimal = dec;
+                
+                let octal = decimal.toString(8);
+
+                let hexadecimal = decimal.toString(16);
+
+                let binario = decimal.toString(2);
+
+                tableResultados.innerHTML += 
+                `
+                <tbody>     
+
+                <tr >
+                <td>${decimal}</td>
+                <td>${octal}</td>
+                <td>${hexadecimal}</td>
+                <td>${binario}</td>
+                
+                </tr>
+                <tbody/>
+                `;
+
+        }else if (oc != ""){
+
+                octal = parseInt(oc,8);
+                
+                let decimal = octal.toString(10);
+
+                let hexadecimal = octal.toString(16);
+
+                let binario = octal.toString(2);
+
+                octal = oc;
+
+                tableResultados.innerHTML += 
+                `
+                <tbody>     
+
+                <tr >
+                <td>${decimal}</td>
+                <td>${octal}</td>
+                <td>${hexadecimal}</td>
+                <td>${binario}</td>
+                
+                </tr>
+                <tbody/>
+                `;
+
+        }else if(hexa != ""){
+
+                hexadecimal = parseInt(hexa,16);
+
+                let decimal = hexadecimal.toString(10);
+
+                let octal = hexadecimal.toString(8);
+
+                let binario = hexadecimal.toString(2);
+
+                hexadecimal = hexa;
+
+                tableResultados.innerHTML += 
+                `
+                <tbody>     
+
+                <tr >
+                <td>${decimal}</td>
+                <td>${octal}</td>
+                <td>${hexadecimal}</td>
+                <td>${binario}</td>
+
+                </tr>
+                <tbody/>
+                `;
+
+        }else if (bin != ""){
+                
+                binario = parseInt(bin,2);
+
+                let decimal = binario.toString(10);
+
+                let octal = binario.toString(8);
+
+                let hexadecimal = binario.toString(16);
+
+                binario = bin;
+
+                tableResultados.innerHTML += 
+                `
+                <tbody>     
+
+                <tr >
+                <td>${decimal}</td>
+                <td>${octal}</td>
+                <td>${hexadecimal}</td>
+                <td>${binario}</td>
+
+                </tr>
+                <tbody/>
+                `;
+
+        }
+}
+</script>
+
+
+
+
+
+
+
+
